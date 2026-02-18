@@ -12,8 +12,9 @@ MAIN_ADMIN_ID = 804822685
 
 bot = telebot.TeleBot(TOKEN, parse_mode='HTML')
 
-ADMINS_FILE = 'admins.json'
-NEW_USERS_FILE = 'new_users.json'
+DATA_DIR = '/app/data'
+ADMINS_FILE = os.path.join(DATA_DIR, 'admins.json')
+NEW_USERS_FILE = os.path.join(DATA_DIR, 'new_users.json')
 
 app = Flask(__name__)
 CORS(app)
